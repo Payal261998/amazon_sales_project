@@ -1,7 +1,9 @@
--- models/dimensions/dim_product.sql
+-- models/dimensions/dim_customer.sql
 SELECT DISTINCT
-    sku AS product_id,
-    style,
-    category,
-    size
+    ship_city || '-' || ship_postal_code AS customer_id,
+    ship_city,
+    ship_state,
+    ship_country,
+    ship_postal_code
 FROM {{ ref('stg_sales') }}
+
