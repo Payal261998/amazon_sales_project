@@ -1,0 +1,11 @@
+# models/schema.yml
+version: 2
+models:
+  - name: product
+    description: "Dimension table for products"
+    columns:
+      - name: product_id
+        tests:
+          - not_null
+          - unique
+
