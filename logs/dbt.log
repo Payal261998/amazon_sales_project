@@ -1,0 +1,151 @@
+[0m15:11:34.855476 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3c7d3885e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3c7ce633d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3c7a312e50>]}
+
+
+============================== 15:11:34.859280 | 928ef6c5-3672-4021-a886-820c018d7455 ==============================
+[0m15:11:34.859280 [info ] [MainThread]: Running with dbt=1.8.7
+[0m15:11:34.860078 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/guptpay/.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt init amazon_sales_project', 'send_anonymous_usage_stats': 'True'}
+[0m15:11:34.872699 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse logging event dictionary. Failed to parse dir field: expected string or bytes-like object.. Dictionary: {'dir': PosixPath('/home/guptpay/.dbt')}
+[0m15:11:34.873338 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m15:11:34.874956 [debug] [MainThread]: Starter project path: /home/guptpay/.local/lib/python3.8/site-packages/dbt/include/starter_project
+[0m15:11:34.878837 [info ] [MainThread]: 
+Your new dbt project "amazon_sales_project" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m15:11:34.879464 [info ] [MainThread]: Setting up your profile.
+[0m15:14:45.551916 [error] [MainThread]: Encountered an error:
+
+[0m15:14:45.554283 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/guptpay/.local/lib/python3.8/site-packages/dbt/cli/requires.py", line 138, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/home/guptpay/.local/lib/python3.8/site-packages/dbt/cli/requires.py", line 101, in wrapper
+    return func(*args, **kwargs)
+  File "/home/guptpay/.local/lib/python3.8/site-packages/dbt/cli/main.py", line 470, in init
+    results = task.run()
+  File "/home/guptpay/.local/lib/python3.8/site-packages/dbt/task/init.py", line 347, in run
+    self.setup_profile(profile_name)
+  File "/home/guptpay/.local/lib/python3.8/site-packages/dbt/task/init.py", line 263, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+  File "/home/guptpay/.local/lib/python3.8/site-packages/dbt/task/init.py", line 180, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "/home/guptpay/.local/lib/python3.8/site-packages/dbt/task/init.py", line 164, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+  File "/home/guptpay/.local/lib/python3.8/site-packages/dbt/task/init.py", line 130, in generate_target_from_input
+    target[key] = click.prompt(
+  File "/home/guptpay/.local/lib/python3.8/site-packages/click/termui.py", line 164, in prompt
+    value = prompt_func(prompt)
+  File "/home/guptpay/.local/lib/python3.8/site-packages/click/termui.py", line 147, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m15:14:45.555926 [debug] [MainThread]: Resource report: {"command_name": "init", "command_wall_clock_time": 190.77586, "process_user_time": 1.392079, "process_kernel_time": 0.164482, "process_mem_max_rss": "90088", "process_in_blocks": "104", "process_out_blocks": "72", "command_success": false}
+[0m15:14:45.556836 [debug] [MainThread]: Command `dbt init` failed at 15:14:45.556683 after 190.78 seconds
+[0m15:14:45.557488 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3c7d3885e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3c7a2b5fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3c7a2b5f70>]}
+[0m15:14:45.558143 [debug] [MainThread]: Flushing usage events
+[0m15:14:50.096120 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9861a295e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f98615083d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f985e9b9e50>]}
+
+
+============================== 15:14:50.099626 | 6bb9f091-3420-4486-8398-49c36c61c233 ==============================
+[0m15:14:50.099626 [info ] [MainThread]: Running with dbt=1.8.7
+[0m15:14:50.100316 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '/home/guptpay/.dbt', 'log_path': 'logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt init amazon_sales_project', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m15:14:50.112260 [info ] [MainThread]: A project called amazon_sales_project already exists here.
+[0m15:14:50.113344 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 0.08915467, "process_user_time": 1.342266, "process_kernel_time": 0.175772, "process_mem_max_rss": "86152", "process_out_blocks": "8", "process_in_blocks": "0"}
+[0m15:14:50.114073 [debug] [MainThread]: Command `dbt init` succeeded at 15:14:50.113944 after 0.09 seconds
+[0m15:14:50.114594 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9861a295e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f985e9a8790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f985eb76250>]}
+[0m15:14:50.115100 [debug] [MainThread]: Flushing usage events
+[0m15:15:20.311915 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc93ec2a5e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc93e7063d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc93bbb4e50>]}
+
+
+============================== 15:15:20.315935 | 14a27e3f-8102-4739-8f68-4c158691a2c5 ==============================
+[0m15:15:20.315935 [info ] [MainThread]: Running with dbt=1.8.7
+[0m15:15:20.316629 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/guptpay/.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': 'logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt init amazon_sales_project', 'send_anonymous_usage_stats': 'True'}
+[0m15:15:20.330619 [debug] [MainThread]: Starter project path: /home/guptpay/.local/lib/python3.8/site-packages/dbt/include/starter_project
+[0m15:15:20.335393 [info ] [MainThread]: 
+Your new dbt project "amazon_sales_project" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m15:15:20.335910 [info ] [MainThread]: Setting up your profile.
+[0m15:15:23.194727 [error] [MainThread]: Encountered an error:
+list index out of range
+[0m15:15:23.196568 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/guptpay/.local/lib/python3.8/site-packages/dbt/cli/requires.py", line 138, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/home/guptpay/.local/lib/python3.8/site-packages/dbt/cli/requires.py", line 101, in wrapper
+    return func(*args, **kwargs)
+  File "/home/guptpay/.local/lib/python3.8/site-packages/dbt/cli/main.py", line 470, in init
+    results = task.run()
+  File "/home/guptpay/.local/lib/python3.8/site-packages/dbt/task/init.py", line 347, in run
+    self.setup_profile(profile_name)
+  File "/home/guptpay/.local/lib/python3.8/site-packages/dbt/task/init.py", line 262, in setup_profile
+    adapter = self.ask_for_adapter_choice()
+  File "/home/guptpay/.local/lib/python3.8/site-packages/dbt/task/init.py", line 244, in ask_for_adapter_choice
+    return available_adapters[numeric_choice - 1]
+IndexError: list index out of range
+
+[0m15:15:23.198213 [debug] [MainThread]: Resource report: {"command_name": "init", "command_wall_clock_time": 2.9561524, "process_user_time": 1.37497, "process_kernel_time": 0.140303, "process_mem_max_rss": "86128", "process_out_blocks": "80", "command_success": false, "process_in_blocks": "0"}
+[0m15:15:23.199116 [debug] [MainThread]: Command `dbt init` failed at 15:15:23.198960 after 2.96 seconds
+[0m15:15:23.199749 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc93ec2a5e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc93bd74250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc93bb619d0>]}
+[0m15:15:23.200371 [debug] [MainThread]: Flushing usage events
+[0m15:15:28.124980 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f30ebbd3940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f30e8ef9e80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f30eb6b0490>]}
+
+
+============================== 15:15:28.128375 | dc870107-ab8d-4d5b-85aa-e512367217de ==============================
+[0m15:15:28.128375 [info ] [MainThread]: Running with dbt=1.8.7
+[0m15:15:28.129120 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/guptpay/.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt init amazon_sales_project', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m15:15:28.141113 [info ] [MainThread]: A project called amazon_sales_project already exists here.
+[0m15:15:28.142153 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 0.08758157, "process_user_time": 1.340982, "process_kernel_time": 0.168123, "process_mem_max_rss": "86324", "process_out_blocks": "8", "process_in_blocks": "0"}
+[0m15:15:28.142937 [debug] [MainThread]: Command `dbt init` succeeded at 15:15:28.142795 after 0.09 seconds
+[0m15:15:28.143455 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f30ebbd3940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f30eb6b0490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f30e8b52850>]}
+[0m15:15:28.143953 [debug] [MainThread]: Flushing usage events
+[0m15:15:37.718440 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5832ddeca0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f582fd644f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5831a146d0>]}
+
+
+============================== 15:15:37.722213 | f7fcb166-e933-4626-bf73-8af3124657f2 ==============================
+[0m15:15:37.722213 [info ] [MainThread]: Running with dbt=1.8.7
+[0m15:15:37.722914 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/guptpay/.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': 'logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt init amazon_sales_project', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m15:15:37.735254 [debug] [MainThread]: Starter project path: /home/guptpay/.local/lib/python3.8/site-packages/dbt/include/starter_project
+[0m15:15:37.738835 [info ] [MainThread]: 
+Your new dbt project "amazon_sales_project" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m15:15:37.739623 [info ] [MainThread]: Setting up your profile.
+[0m15:16:36.950575 [info ] [MainThread]: Profile amazon_sales_project written to /home/guptpay/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m15:16:36.952081 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 59.30675, "process_user_time": 1.408245, "process_kernel_time": 0.143617, "process_mem_max_rss": "90016", "process_out_blocks": "80", "process_in_blocks": "0"}
+[0m15:16:36.952967 [debug] [MainThread]: Command `dbt init` succeeded at 15:16:36.952825 after 59.31 seconds
+[0m15:16:36.953490 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5832ddeca0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f582fd5a700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f582fd148e0>]}
+[0m15:16:36.954073 [debug] [MainThread]: Flushing usage events

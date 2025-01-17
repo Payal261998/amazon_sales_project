@@ -1,0 +1,6 @@
+SELECT dt.season, SUM(fs.amount) AS total_sales
+FROM sales fs
+JOIN time dt ON fs.date_id = dt.date_id
+GROUP BY dt.season
+ORDER BY total_sales DESC;
+

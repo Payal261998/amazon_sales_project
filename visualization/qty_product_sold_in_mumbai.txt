@@ -1,0 +1,8 @@
+SELECT dp.style, dp.category, SUM(fs.qty) AS total_quantity
+FROM sales fs
+JOIN product dp ON fs.product_id = dp.product_id
+JOIN customer dc ON fs.customer_id = dc.customer_id
+WHERE dc.ship_city = 'Mumbai'
+GROUP BY dp.style, dp.category
+ORDER BY total_quantity DESC;
+
